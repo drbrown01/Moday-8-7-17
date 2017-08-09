@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <title>JavaScript Content!</title>
+</head>
+<body>
+
+  <h1>Drink Selection!</h1>
+  <hr>
+
+  <div id="drink-options"></div>
+
+  <script type="text/javascript">
+
+    var drinkList = [
+      "Coffee: $5",
+      "Espresso: $7",
+      "Cappuccino: $6",
+      "Latte: $4",
+      "Tea: $3",
+      "Ice Coffee: $6",
+      "Ice Espresso: $8",
+      "Ice Latte: $6",
+      "Ice Tea: $4"
+    ];
+
+    // var drinkOptions = document.getElementById('drink-options')
+    var drinkOptions = $("#drink-options");
+
+       // ...
+
+
+       // 2. Create a for loop that creates HTML content of all the drinks using JavaScript.
+       // HINT: You will need to use each of the following methods: createElement, innerHTML, appendChild
+       // ...
+   for( var i=0; i< drinkList.length; i++) {
+      // //  newDiv = document.createElement("div");
+      //
+      //  newDiv.innerHTML = drinkList[i];
+      //  $("#empty-div").append(newDiv);
+      // //  drinkOptions.appendChild(newDiv);
+      newDiv = $("<div>"); //creates child dive hanging
+     newDiv.html (drinkList[i]); //put the name of drink in the child div- still hanging
+     drinkOptions.append(newDiv); // attach the child div as a child to the old div
+}
+  </script>
+
+</body>
+</html>
